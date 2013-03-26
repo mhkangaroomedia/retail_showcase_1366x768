@@ -339,26 +339,6 @@ a.no_linking
 
 
 
-.fade /*TEMP STYLE TO HELP DESIGNING*/
-{
-	-webkit-transition-property: opacity, -webkit-transform;
-	-webkit-transition-delay: 0.1s, 0s;
-	-webkit-transition-duration: 0.8s, 0s;
-
-	opacity: 1;
-	-webkit-transform: rotate(0deg) translate(768px, 0px) scale(1) translateZ(0px);
-	background-color: cyan;
-	width: 768px;
-	height: 1366px;
-	max-height: 1366px;
-	z-index: 0;
-	box-shadow: inset 0px 0px 7px rgba(0,0,0,0.5);
-}
-
-
-
-
-
 .container
 {
 	overflow: hidden;
