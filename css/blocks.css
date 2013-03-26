@@ -202,7 +202,7 @@ body.edit .gallery .image-region-wrapper
 
 body.edit .gallery .gallery_item > .image-region-wrapper > img
 {
-	width: 380px;
+	width: 265px;
 	height: 368px;
 	position: absolute;
 	top: -25px;
@@ -511,8 +511,10 @@ body.edit .small_standard_form .form_text .editable_region
 	width: 177px;
 }
 
-
-
+body.edit .bottom_nav_base_bar
+{
+	display: none;
+}
 
 
 
