@@ -1,0 +1,264 @@
+<!doctype html>
+<html class="showcase_gallery preload no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="keywords" content="<%= keywords %>">
+		<meta name="description" content="<%= description %>">
+		<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+
+		<title><%= title %></title>
+
+		<% unless @mode == 'edit' %>
+
+			<script>
+				var params = location.search;
+				if ( params.indexOf('screensaver=true') > -1 ) {
+
+					document.write('<scri'+'pt src="/templates/dse_screensaver/screensaver.js"></scr'+'ipt>');
+
+					var screensaver_bool = true;
+					document.documentElement.classList.add('screensaver_showing');
+
+				} else {
+
+					var screensaver_bool = false;
+
+				}
+			</script>
+
+		<% end %>
+
+		
+		<link rel="stylesheet" href="/templates/retail_showcase_768x1024/css/style.css">
+	    <% if @mode == 'edit' %>
+			<link rel="stylesheet" href="/templates/retail_showcase_768x1024/css/blocks.css">
+	  	<% else %>
+			<script src="/templates/retail_showcase_768x1024/js/libs/modernizr-2.6.2.custom.min.js"></script>
+	  	<% end %>
+
+	  	<!-- sitewide color styles -->
+	  	<%
+	  		primary_fg_color = @page.site.extra_attributes.find_by_name("Site foreground color (text)").try(:value) || '#67AD3D'
+			primary_bg_color = @page.site.extra_attributes.find_by_name("Site background color (panels)").try(:value) || '#67AD3D'
+		%>
+		<style>
+			.custom_foreground_color { color: <%= primary_fg_color %>; }
+			.custom_background_color { background-color: <%= primary_bg_color %>; }
+		</style>
+
+
+		<script>
+			var site_name = '<%= @page.site.name.clean %>';
+		</script>
+
+
+	</head><!--======================================================
+		retail_showcase_768x1024
+		showcase_gallery
+	=======================================================--><body>
+		
+
+		<!-- element used for page transitions -->
+		<div class="page_load_transition"></div>
+
+
+		<!-- element used for popup lightboxes etc.. -->
+		<div class="fade"></div>
+
+		<!-- bar to seperate main nav from footer panel -->
+		<div class="bottom_nav_base_bar nav_animation_b"></div>
+
+
+		<!-- info panel for optional info ('extra') buttons within gallery -->
+		<div id="info_panel" class="info_panel noselect">
+			<div class="panel_banner">
+				<span class="heading custom_foreground_color noselect"><!-- Panel heading --></span>
+				<div class="close noselect"></div>
+			</div> <!-- end panel banner -->
+			<div class="textual_content">
+				<span class="sub_heading custom_foreground_color noselect"><!-- item description &amp; features --></span>
+				<div class="copy no_linking noselect"><!-- <p>cras vel sapien suscipit enim porta consectetur a et leo. in feugiat sollicitudin eros, faucibus scelerisque sapien molestie eu. aenean vitae nisl elit, sit amet mattis.</p> --></div>
+			</div> <!-- end textual content -->
+			<div class="image_content noselect">
+				<!-- <img src="img/placeholders/products_250x330.jpg" width="250" height="330"/> -->
+			</div> <!-- end image content -->
+		</div> <!-- end info panel -->
+
+
+
+		<div id="container" class="container" >
+
+			
+			<div class="gallery noselect">
+
+				<div class="slide_wrap">
+
+
+					<% render :region => 'swipe_gallery_repeating_region', :max_repeats => 10, :elective => false do %>
+
+
+						<div class="gallery_item slide left">
+							
+							<%= render :image => 'main_image_', :default => "/templates/retail_showcase_768x1024/img/placeholders/products_768x745.jpg", :width => "768", :height => "745" %>
+							<div class="text_panel custom_background_color nav_animation">
+								
+								<span class="line_1"><%= render :textual => 'offer_top_line_', :default => 'now only', :maxlength => '15' %></span>
+								
+								<div class="price_div">
+									<span class="price_sign">$</span>
+									<span class="price_dollars"><%= render :textual => 'offer_dollars_', :default => '105', :maxlength => '3' %></span>
+									<span class="price_point">.</span>
+									<span class="price_cents"><%= render :textual => 'offer_cents_', :default => '90', :maxlength => '2' %></span>
+								</div>
+								
+								<span class="line_2"><%= render :textual => 'offer_second_line_', :default => '* limited stock', :maxlength => '15' %></span>
+							</div>
+
+
+							<% if @mode == 'edit' %>
+								<div class="blocks_notes type_2 extras_note">
+									<p>Optional extras button/badge:</p>
+								</div>
+								<!-- optional graphic button for extra action -->
+								<div class="choose_extras_option"><%= render :set => "extras_button", :values => [ [ 'Button reveals an info panel', "option_1" ], [ 'Button links to another page', "option_2" ], [ 'No button', "option_3" ] ] %></div>
+
+							<% end %>
+
+							
+
+							
+							<!-- <%# if parent.elements.find_by_name('extras_button').selected == "option_1" || @mode == 'edit' %> -->
+							<% if parent.elements.detect{ |e| e.name == 'extras_button' }.try(:selected) == "option_1" || @mode == 'edit' %>
+								
+								<div class="extra pop"><!-- option 1 -->
+									<div class="info_for_popup">
+										<span class="heading"><%= render :textual => 'poupup_heading', :default => 'Popup panel heading', :maxlength => '25' %></span>
+										<span class="sub_heading"><%= render :textual => 'poupup_sub_heading', :default => 'Product heading', :maxlength => '50' %></span>
+										<div class="copy"><%= render :textual => 'tiny_mce_text_unique_name', :type => :multi, :default => "<p>Vivamus id mollis quam. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum.</p>" %></div>
+										<%= render :image => 'popup_image', :default => "/templates/retail_showcase_768x1024/img/placeholders/products_250x330.jpg", :width => "250", :height => 200..380 %>
+									</div> <!-- end info_for_popup -->
+									<%= render :image => 'extra_button_image', :default => "/templates/retail_showcase_768x1024/img/placeholders/extra_240x240.png", :width => "240", :height => "240" %>
+								</div> <!-- end extra pop -->
+
+							<% end %>
+
+
+
+
+							<!-- <%# if parent.elements.find_by_name('extras_button').selected == "option_2" || @mode == 'edit' %> -->
+							<% if parent.elements.detect{ |e| e.name == 'extras_button' }.try(:selected) == "option_2" || @mode == 'edit' %>
+
+								<div class="extra link"><!-- option 2  -->
+									<% render :link => "extra_link", :text_editable => false, :link_value => '#', :link_attributes => { :class => "extra_link" } do %>
+										<%= render :image => 'extra_button_image_with_link', :default => "/templates/retail_showcase_768x1024/img/placeholders/extra_240x240.png", :width => "240", :height => "240" %>
+									<% end %>
+								</div>
+
+							<% end %>
+
+
+
+
+
+
+							
+
+							
+							
+
+
+						</div> <!-- end gallery item -->
+
+
+					<% end %> <!-- end repeat region swipe_gallery_repeating_region -->
+
+
+
+
+				</div> <!-- end slide_wrap -->
+
+			</div> <!-- end gallery -->
+			
+			
+
+
+
+
+
+
+
+
+			
+
+
+
+			<!-- TOP NAVIGATION START -->
+			<div class="top_nav nav_animation">
+				<!-- <div id="top_nav_trigger" class="show_menu ccsBgAni_half">
+					<span class="menu_title custom_foreground_color"><%#= render :textual => 'top_nav_menu_title', :default => 'Menu', :maxlength => '30' %></span>
+				</div> -->
+				<div class="current_page_div">
+					<span class="current_page"><%#= @page.name %></span>
+				</div>
+			</div>
+			<!-- <%#= render :navigation => "Top" , :template_name => 'top.nav' %> -->
+			<!-- TOP NAVIGATION END -->
+
+
+			
+
+			<!-- BOTTOM (MAIN) NAVIGATION START -->
+			<div class="bottom_nav nav_animation">
+				<div id="bottom_nav_trigger" class="show_menu ccsBgAni_half">
+					<div class="main_nav_icon"><div></div><div></div><div></div></div>
+					<span class="menu_title custom_foreground_color"><%= render :textual => 'main_nav_menu_title', :default => 'Main Menu', :maxlength => '30' %></span>
+				</div>
+				
+			</div>
+			<%= render :navigation => "Main" , :template_name => 'main.nav' %>
+			<!-- BOTTOM (MAIN) NAVIGATION END -->
+
+
+
+
+
+
+
+
+			<%= include_site_widget("footer") %>
+			
+
+
+
+			
+			
+		</div> <!-- end of #container -->
+
+
+
+		<% if @mode == 'edit' %>
+			<div class="blocks_notes top_margin_a">
+				<p>Site colors are changed via site attributes<br/>[site admin] > [site attributes]<br/><br/>Forground colors for text are set in the<br/>'Site foreground color (text)' field<br/><br/>Background colors for panels are set in the<br/>'Site background color (panels)' field.</p>
+			</div>
+		<% end %>
+
+		
+		<%= render :region => 'helpers' %>
+
+		<script src="/templates/retail_showcase_768x1024/js/libs/jquery-1.8.1.min.js"></script>
+		<script src="/templates/retail_showcase_768x1024/js/libs/jquery-ui-1.9.0.custom.min.js"></script>
+		<script src="/templates/retail_showcase_768x1024/js/plugins.js"></script>
+		<script src="/templates/retail_showcase_768x1024/js/script.js"></script>
+		 <% if @mode == 'edit' %>
+			<script>
+				function insertScriptForBlocks(src) {
+					var blocksEditScript = document.createElement('script'); blocksEditScript.type = 'text/javascript'; blocksEditScript.async = true;
+					blocksEditScript.src = src;
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(blocksEditScript, s);
+				}
+				insertScriptForBlocks('/templates/retail_showcase_768x1024/js/blocksEditScript.js');
+			</script>
+	  	<% end %>
+	</body>
+</html>

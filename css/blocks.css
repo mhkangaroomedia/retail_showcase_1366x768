@@ -1,0 +1,518 @@
+body.edit .blocks_notes {
+	padding: 10px;
+	margin: 70px 0 10px 0;
+	color: #fff;
+	background-color: #39c;
+	border: 2px solid #1E6081;
+	border-radius: 5px;
+	font-size: 16px;
+	width: 310px;
+	clear: both;
+}
+
+body.edit .blocks_notes.top_margin_a
+{
+	margin-top: 70px;
+}
+
+body.edit .blocks_notes.warning_type_2
+{
+	width: 700px;
+	height: 140px;
+	background-color: #890000;
+	border: 2px solid red;
+	border-radius: 10px;
+}
+
+body.edit .blocks_notes p {
+	margin: 0;
+	padding: 0;
+}
+
+body.edit .blocks_notes.type_2 {
+  padding: 5px;
+  padding-bottom: 9px;
+  margin: -5px 0 0px 0;
+  color: #fff;
+  background-color: #00456F;;
+  border: 2px solid #00E0FF;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 310px;
+}
+
+body.edit .blocks_notes.top_margin
+{
+	margin-top: 55px;
+}
+
+
+body.edit .blocks_notes.type_3 {
+  
+  padding-bottom: 29px;
+}
+
+body.edit form .blocks_notes.type_3 p {
+  color: white;
+}
+
+body.edit .blocks_info_image
+{
+	display: block;
+	
+	clear: both;
+}
+
+
+body.edit .blocks_notes.template_name
+{
+	margin: 30px 0 110px 0;
+	background-color: #75996b;
+}
+
+
+
+
+
+
+
+/*
+	BLOCKS HELPER CSS
+*/
+
+/* stretches text regions to full width */
+body.edit div#blocks-wrapper div#inner-blocks-wrapper textarea {
+	width: 100%;
+}
+
+
+/*
+	these rules will show max/min image dimensions on image regions using the existing
+*/
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element {
+	position: absolute;
+	top: 0;
+	left: 125px;
+	background: white;
+	font-size: 11px;
+	line-height: 1em;
+	padding: 5px 5px 6px 5px;
+	margin: 1px;
+	display: block;
+	z-index: 999999;
+}
+.ie7 body.edit div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element { display: none; }
+
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .width,
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .height,
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .asset-id { 	display: none; }
+
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .min-width { }
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .min-width:before { content: 'Min.: '; }
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .min-width:after { content: ' x'; }
+
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .min-height { }
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .min-height:after { content: 'px'; }
+
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .max-width { }
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .max-width:before { content: 'Max.: '; }
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .max-width:after { content: ' x'; }
+
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .max-height { }
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .max-height:after { content: 'px'; }
+
+
+/* shows page url bottom right in edit mode */
+#page_url_helper {
+	text-align: center;
+	position: fixed;
+	background: #333;
+	bottom: 0;
+	right: 0;
+	z-index: 9999;
+	color: white;
+	font-size: 10px;
+	padding: 3px 10px;
+	border-radius: 3px 0 0 0;
+	-webkit-box-shadow: 0 0 5px 0 #999;
+	   -moz-box-shadow: 0 0 5px 0 #999;
+	        box-shadow: 0 0 5px 0 #999;
+}
+#page_url_helper a {
+	color: white;
+}
+
+
+
+/*===================================================================================
+            SPECIFIC TO PROJECT >>>>>
+===================================================================================*/
+
+
+body.edit,
+html.preload,  /* preload is not removed by javascript in blocks unless you do so in the blocksEditScript.js */
+body.edit .container
+{
+	height: auto;
+}
+body.edit .container
+{
+	position: relative;
+}
+
+
+/* overwrite page transition fade */
+.preload body.edit .page_load_transition
+{
+	-webkit-transition-property: opacity, -webkit-transform;
+	-webkit-transition-delay: 0s, 1.5s;
+	-webkit-transition-duration: 1.4s, 0s;
+
+	opacity: 0;
+	-webkit-transform: rotate(0deg) translate(0px, 0px) scale(1) translateZ(0px);
+}
+
+
+
+body.edit .gallery
+{
+	width:  768px;
+	height: auto;
+	position: relative;
+	margin-top: 70px;
+}
+
+body.edit .gallery .slide_wrap
+{
+	height: auto;
+}
+
+body.edit .gallery .gallery_item
+{
+	height: 615px;
+}
+
+body.edit .gallery .image-region-wrapper
+{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 369px;
+}
+
+body.edit .gallery .gallery_item > .image-region-wrapper > img
+{
+	width: 380px;
+	height: 368px;
+	position: absolute;
+	top: -25px;
+	right: 30px;
+}
+
+body.edit .bottom_nav
+{
+	position: static;
+}
+
+body.edit .gallery .text_panel .line_1,
+body.edit .gallery .text_panel .line_2
+{
+	font-size: 23px;
+	margin-top: 20px;
+}
+
+body.edit .gallery .text_panel .line_2
+{
+	margin-top: 94px;
+}
+
+body.edit .text-region-wrapper input[disabled="disabled"]
+{
+	font-size: 14px;
+	border: none;
+	background-color: transparent;
+	top: -14px;
+	position: relative;
+	left: 4px;
+	width: 20px;
+}
+
+body.edit .gallery .text_panel
+{
+	height: 201px;
+}
+
+body.edit .gallery .text_panel .price_div
+{
+	display: block;
+	position: absolute;
+	top: 63px;
+	width: 273px;
+	height: 58px;
+	overflow: hidden;
+}
+
+body.edit .gallery .price_div .price_dollars,
+body.edit .gallery .price_div .price_cents
+{
+	font-size: 25px;
+}
+
+body.edit .gallery .price_div .price_dollars .text-region-wrapper
+{
+	float: left;
+}
+
+body.edit .gallery .price_div .price_dollars .text-region-wrapper input.editable_region,
+body.edit .gallery .price_div .price_cents .text-region-wrapper input.editable_region
+{
+	width: 48px;
+}
+
+body.edit .gallery .price_div .price_dollars
+{
+	width: 80px;
+	position: absolute;
+	top: 5px;
+	left: 47px;
+}
+
+
+body.edit .gallery .price_div .price_sign
+{
+	position: absolute;
+	top: 5px;
+	left: 20px;
+}
+
+body.edit .gallery .price_div .price_point
+{
+	position: absolute;
+	top: 5px;
+	left: 125px;
+}
+
+body.edit .gallery .price_div .price_cents
+{
+	width: 80px;
+	position: absolute;
+	top: 5px;
+	left: 147px;
+}
+
+
+body.edit .footer_panel
+{
+	position: relative;
+	top: 0px;
+	height: 309px;
+}
+
+
+
+body.edit #top_nav_content,
+body.edit #bottom_nav_content
+{
+	display: none;
+}
+
+
+.extras_note
+{
+	position: absolute;
+	top: 270px;
+	left: 0px;
+}
+
+.choose_extras_option
+{
+	position: absolute;
+	top: 310px;
+	left: 0px;
+	font-size: 20px;
+}
+
+body.edit #bottom_nav_trigger
+{
+	position: relative;
+	width: 445px;
+}
+
+body.edit #bottom_nav_trigger .text-region-wrapper input[disabled="disabled"]
+{
+	color: gray;
+}
+
+body.edit .extra
+{
+	width: 718px;
+	height: 250px;
+	border: 1px dotted gray;
+	left: 10px;
+	top: 360px;
+}
+
+
+body.edit .extra > .link-region-wrapper > .image-region-wrapper > img,
+body.edit .extra > .image-region-wrapper > img
+{
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: 40px;
+	right: 29px;
+}
+
+
+
+
+body.edit .extra.link .editable_link
+{
+	margin-left: 465px;
+	margin-top: 2px;
+}
+
+body.edit .extra.pop .copy
+{
+	width: 200px;
+	height: 200px;
+	margin-left: 3px;
+	margin-top: 3px;
+}
+
+body.edit .extra.pop .copy .text-region-wrapper
+{
+	height: 170px !important;
+}
+
+body.edit .extra.pop table.mceLayout .mceLast iframe
+{
+	height: 92px !important;
+}
+
+body.edit .extra.pop table.mceLayout tr.mceLast
+{
+	height: 92px !important;
+	display: block;
+}
+
+body.edit .extra.pop table.mceLayout > tbody
+{
+	display: table-header-group;
+}
+
+
+body.edit .extra.link
+{
+	display: none;
+}
+
+body.edit .extra > .image-region-wrapper,
+body.edit .extra.link .link-region-wrapper > .image-region-wrapper
+
+{
+	width: 230px;
+}
+
+
+body.edit .extra.pop .info_for_popup > .image-region-wrapper
+{
+	position: absolute;
+	left: 250px;
+	top: 19px;
+	width: 230px;
+}
+
+
+
+body.edit .extra.pop .info_for_popup > .image-region-wrapper > img
+{
+	width: auto;
+	height: 188px;
+	border: 1px solid black;
+}
+
+
+body.edit .info_for_popup
+{
+	display: block;
+	width: 468px;
+	height: 228px;
+	border: 1px solid gray;
+	margin: 10px 0px 0px 10px;
+}
+
+
+body.edit .extra.pop .info_for_popup input.editable_region
+{
+	width: 178px;
+	margin-left: 3px;
+	margin-top: 3px;
+}
+
+body.edit .info_for_popup .text-region-wrapper input[disabled="disabled"]
+{
+	font-size: 12px;
+	border: none;
+	background-color: transparent;
+	top: -3px;
+	position: relative;
+	left: 4px;
+	width: 20px;
+}
+
+
+body.edit .footer_section .title input.editable_region
+{
+	width: 190px;
+}
+
+body.edit .footer_section .title input[disabled="disabled"]
+{
+	top: -6px;
+}
+
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .footer_section .image-region-wrapper div.blocks-element
+{
+	display: none;
+}
+
+body.edit .advert_image_div
+{
+	height: 172px;
+}
+
+
+body.edit .logo_div
+{
+	position: absolute;
+	top: 225px;
+}
+
+body.edit .logo_div .image-region-wrapper
+{
+	width: 330px;
+	padding-top: 17px;
+}
+
+body.edit #email,
+body.edit #submit_email
+{
+	display: none;
+}
+
+body.edit .small_standard_form .form_text
+{
+	margin: 27px 0px 10px 10px;
+}
+
+body.edit .small_standard_form .form_text .editable_region
+{
+	width: 177px;
+}
+
+
+
+
+
+
