@@ -30,11 +30,11 @@
 		<% end %>
 
 		
-		<link rel="stylesheet" href="/templates/retail_showcase_768x1024/css/style.css">
+		<link rel="stylesheet" href="/templates/retail_showcase_768x1366/css/style.css">
 	    <% if @mode == 'edit' %>
-			<link rel="stylesheet" href="/templates/retail_showcase_768x1024/css/blocks.css">
+			<link rel="stylesheet" href="/templates/retail_showcase_768x1366/css/blocks.css">
 	  	<% else %>
-			<script src="/templates/retail_showcase_768x1024/js/libs/modernizr-2.6.2.custom.min.js"></script>
+			<script src="/templates/retail_showcase_768x1366/js/libs/modernizr-2.6.2.custom.min.js"></script>
 	  	<% end %>
 
 	  	<!-- sitewide color styles -->
@@ -54,7 +54,7 @@
 
 
 	</head><!--======================================================
-		retail_showcase_768x1024
+		retail_showcase_768x1366
 		showcase_gallery
 	=======================================================--><body>
 		
@@ -100,7 +100,7 @@
 
 						<div class="gallery_item slide left">
 							
-							<%= render :image => 'main_image_', :default => "/templates/retail_showcase_768x1024/img/placeholders/products_768x745.jpg", :width => "768", :height => "745" %>
+							<%= render :image => 'main_image_', :default => "/templates/retail_showcase_768x1366/img/placeholders/products_768x1066.jpg", :width => "768", :height => "1066" %>
 							<div class="text_panel custom_background_color nav_animation">
 								
 								<span class="line_1"><%= render :textual => 'offer_top_line_', :default => 'now only', :maxlength => '15' %></span>
@@ -136,9 +136,9 @@
 										<span class="heading"><%= render :textual => 'poupup_heading', :default => 'Popup panel heading', :maxlength => '25' %></span>
 										<span class="sub_heading"><%= render :textual => 'poupup_sub_heading', :default => 'Product heading', :maxlength => '50' %></span>
 										<div class="copy"><%= render :textual => 'tiny_mce_text_unique_name', :type => :multi, :default => "<p>Vivamus id mollis quam. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum.</p>" %></div>
-										<%= render :image => 'popup_image', :default => "/templates/retail_showcase_768x1024/img/placeholders/products_250x330.jpg", :width => "250", :height => 200..380 %>
+										<%= render :image => 'popup_image', :default => "/templates/retail_showcase_768x1366/img/placeholders/products_250x330.jpg", :width => "250", :height => 200..380 %>
 									</div> <!-- end info_for_popup -->
-									<%= render :image => 'extra_button_image', :default => "/templates/retail_showcase_768x1024/img/placeholders/extra_240x240.png", :width => "240", :height => "240" %>
+									<%= render :image => 'extra_button_image', :default => "/templates/retail_showcase_768x1366/img/placeholders/extra_240x240.png", :width => "240", :height => "240" %>
 								</div> <!-- end extra pop -->
 
 							<% end %>
@@ -151,7 +151,7 @@
 
 								<div class="extra link"><!-- option 2  -->
 									<% render :link => "extra_link", :text_editable => false, :link_value => '#', :link_attributes => { :class => "extra_link" } do %>
-										<%= render :image => 'extra_button_image_with_link', :default => "/templates/retail_showcase_768x1024/img/placeholders/extra_240x240.png", :width => "240", :height => "240" %>
+										<%= render :image => 'extra_button_image_with_link', :default => "/templates/retail_showcase_768x1366/img/placeholders/extra_240x240.png", :width => "240", :height => "240" %>
 									<% end %>
 								</div>
 
@@ -246,10 +246,10 @@
 		
 		<%= render :region => 'helpers' %>
 
-		<script src="/templates/retail_showcase_768x1024/js/libs/jquery-1.8.1.min.js"></script>
-		<script src="/templates/retail_showcase_768x1024/js/libs/jquery-ui-1.9.0.custom.min.js"></script>
-		<script src="/templates/retail_showcase_768x1024/js/plugins.js"></script>
-		<script src="/templates/retail_showcase_768x1024/js/script.js"></script>
+		<script src="/templates/retail_showcase_768x1366/js/libs/jquery-1.8.1.min.js"></script>
+		<script src="/templates/retail_showcase_768x1366/js/libs/jquery-ui-1.9.0.custom.min.js"></script>
+		<script src="/templates/retail_showcase_768x1366/js/plugins.js"></script>
+		<script src="/templates/retail_showcase_768x1366/js/script.js"></script>
 		 <% if @mode == 'edit' %>
 			<script>
 				function insertScriptForBlocks(src) {
@@ -257,7 +257,7 @@
 					blocksEditScript.src = src;
 					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(blocksEditScript, s);
 				}
-				insertScriptForBlocks('/templates/retail_showcase_768x1024/js/blocksEditScript.js');
+				insertScriptForBlocks('/templates/retail_showcase_768x1366/js/blocksEditScript.js');
 			</script>
 	  	<% end %>
 	</body>
