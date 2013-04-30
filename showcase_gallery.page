@@ -129,7 +129,7 @@
 									<% styleString = "" %>
 								<% end %>
 
-								<div class="text_panel custom_background_color nav_animation">
+								<div class="text_panel custom_background_color nav_animation" style="<%= styleString %>">
 									
 									<span class="line_1"><%= render :textual => 'offer_top_line_', :default => 'now only', :maxlength => '15' %></span>
 									
