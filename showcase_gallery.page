@@ -43,8 +43,9 @@
 			primary_bg_color = @page.site.extra_attributes.find_by_name("Site background color (panels)").try(:value) || '#67AD3D'
 		%>
 		<style>
-			.custom_foreground_color { color: <%= primary_fg_color %>; }
-			.custom_background_color { background-color: <%= primary_bg_color %>; }
+			.custom_foreground_color       { color: <%= primary_fg_color %>; }
+			.custom_foreground_color_as_bg { background-color: <%= primary_fg_color %>; }
+			.custom_background_color       { background-color: <%= primary_bg_color %>; }
 		</style>
 
 
@@ -177,6 +178,18 @@
 
 
 				</div> <!-- end slide_wrap -->
+
+				<div class="left_control">
+					<div class="left_control_button custom_foreground_color_as_bg">
+						<div class="left_icon"></div>
+					</div>
+				</div>
+
+				<div class="right_control">
+					<div class="right_control_button custom_foreground_color_as_bg">
+						<div class="right_icon"></div>
+					</div>
+				</div>
 
 			</div> <!-- end gallery -->
 			
