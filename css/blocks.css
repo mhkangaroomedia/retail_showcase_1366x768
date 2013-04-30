@@ -522,3 +522,24 @@ body.edit .right_control
 	display: none;
 }
 
+
+body.edit .panel_color
+{
+	/*width: 160px;*/
+	height: 30px;
+	position: absolute;
+	top: 12px;
+	left: 120px;
+}
+
+body.edit .panel_color .editable_region
+{
+	width: 149px;
+}
+
+body.edit .panel_color input[disabled="disabled"]
+{
+	display: none;
+}
+
+
