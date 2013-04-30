@@ -28,7 +28,7 @@
 				<div class="form_action" style="display:none;">http://digitallab.blockshome.com/forms/fOOVS0eEw8uLeTv.json</div>
 
 				
-
+ 
 				<div class="input first full">
 					<input id="email" type="email" value="" class="email required" name="email"  placeholder="<%= language_translation('footer.panel_2.email_placeholder') %>" autocomplete="off">
 				</div>
