@@ -797,6 +797,8 @@ app.form = (function(){
 		$form = $("#standard_form");
 		var fa = $form.find('.form_action').text();
 		$form.attr('action', fa);
+
+
 		fauxCheckboxes();
 		fauxSelects();
 
@@ -806,13 +808,16 @@ app.form = (function(){
 		});
 
 
-		if($form.length){
+		if($form.length === 1){
 			$form.validate({
 				/*
 				submitHandler: function(form) {
 			     $(form).ajaxSubmit();
 			    },
 			    */
+			
+				// setting this makes validation non-lazy
+			    onkeyup: function(element) { $(element).valid(); },
 
 				// Change the default error element to <em> for easy hiding with CSS if not required
 				errorElement: "em",
@@ -820,11 +825,13 @@ app.form = (function(){
 				//Adds "error" class to input label
 				highlight: function(element, errorClass, validClass) {
 					toggleHighlight(element,errorClass,validClass,false);
+					$('#submit_email').removeClass('ok');
 				},
 			
 				//Removes "error" class to input label
 				unhighlight: function(element, errorClass, validClass) {
 					toggleHighlight(element,errorClass,validClass,true);
+					$('#submit_email').addClass('ok');
 				},
 
 				errorPlacement: function(error, element) {
@@ -859,18 +866,19 @@ app.form = (function(){
         }
       });
 
-  } // end init
+  	} // end init
 
 
-  function formSuccess(){
-	  var thanksDiv = '<div id="thanksDiv"><div class="custom_background_color"><span>Thanks for signing up!</span></div></div>';
+  	function formSuccess(){
+	  	var thanksDiv = '<div id="thanksDiv"><div class="custom_background_color"><span>Thanks for signing up!</span></div></div>';
 	 	$('.small_form_div').append(thanksDiv);
 	 	//app.logging_stats.log('signup', $form, '');
 	 
 		setTimeout( function(){
 		  $('#thanksDiv').remove();
 		}, 3700 );
-  }
+  	}
+
 
 	function tabToNextCapture() {
 		$form.on('keydown', function(e) { 
