@@ -324,6 +324,18 @@ body.edit #bottom_nav_content
 	left: 0px;
 }
 
+.panel_note
+{
+	position: relative;
+	top: -20px;
+	left: 0px;
+}
+
+.choose_panel_option
+{
+	margin-top: -17px;
+}
+
 .choose_extras_option
 {
 	position: absolute;
