@@ -240,6 +240,7 @@ body.edit .text-region-wrapper input[disabled="disabled"]
 body.edit .gallery .text_panel
 {
 	height: 201px;
+	top: 35px;
 }
 
 body.edit .gallery .text_panel .price_div
