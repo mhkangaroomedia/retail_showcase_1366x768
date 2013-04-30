@@ -96,7 +96,7 @@
 				<div class="slide_wrap">
 
 					<% if @mode == 'edit' %>
-						<div class="blocks_notes type_2 extras_note">
+						<div class="blocks_notes type_2 choose_controls_note">
 							<p>Optional gallery tap-left, tap-right controls:</p>
 						</div>
 					
