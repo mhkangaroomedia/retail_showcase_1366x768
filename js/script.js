@@ -663,6 +663,17 @@ app.swipe_gallery = (function(){
 			populatePopup(_this);
 		});
 
+
+		gallery.on('click', '.left_control', function(){
+			current = ( current-1 > -1 ) ? current-1 : max-1;
+			scrollToPage(current);
+		});
+
+		gallery.on('click', '.right_control', function(){
+			current = ( current+1 < max ) ? current+1 : 0;
+			scrollToPage(current);
+		});
+
 	}
 
 
@@ -700,7 +711,10 @@ app.swipe_gallery = (function(){
 			snap       : '.gallery_item',
 			momentum   : false,
 			vScroll    : false,
-			hScrollbar : hScrollbar
+			hScrollbar : hScrollbar,
+			onScrollEnd : function(){
+				current = $.inArray(scroller.x,scroller.pagesX) || 0;
+			}
 		});
 	}
 

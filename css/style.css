@@ -1115,20 +1115,18 @@ a.no_linking
 	height: 120px;
 	position: absolute;
 	top: 50%;
-	left: 10px;
-
-	background-color: cyan;
+	cursor: pointer;
 }
 
 
 .left_control
 {
-	left: 10px;
+	left: 0px;
 }
 
 .right_control
 {
-	right: 10px;
+	right: 0px;
 }
 
 
@@ -1139,30 +1137,41 @@ a.no_linking
 	height: 60px;
 	border-radius: 40px;
 	position: absolute;
-	left: 30px;
 	top: 30px;
+}
+
+.left_control_button
+{
+	left: 23px;
+}
+
+.right_control_button
+{
+	right: 23px;
 }
 
 	
 .left_icon,
 .right_icon
 {
-	width: 10px;
-	height: 7px;
+	width: 16px;
+	height: 29px;
 	position: absolute;
-	top: 10px;
+	top: 15px;
 }
 
 .left_icon
 {
 	background-image: url(../img/left_white.png);
 	background-repeat: no-repeat;
+	left: 19px;
 }
 
 .right_icon
 {
 	background-image: url(../img/right_white.png);
 	background-repeat: no-repeat;
+	right: 19px;
 }
 
 

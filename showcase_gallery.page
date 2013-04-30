@@ -95,6 +95,14 @@
 
 				<div class="slide_wrap">
 
+					<% if @mode == 'edit' %>
+						<div class="blocks_notes type_2 extras_note">
+							<p>Optional gallery tap-left, tap-right controls:</p>
+						</div>
+					
+						<div class="choose_controls_option"><%= render :set => "tap_controls_button", :values => [ [ 'Include touch controls', "option_1" ], [ 'Exclude touch controls', "option_2" ] ] %></div>
+
+					<% end %>
 
 					<%= render :region => 'swipe_gallery_repeating_region', :max_repeats => 10, :elective => false do %>
 
@@ -179,17 +187,21 @@
 
 				</div> <!-- end slide_wrap -->
 
-				<div class="left_control">
-					<div class="left_control_button custom_foreground_color_as_bg">
-						<div class="left_icon"></div>
-					</div>
-				</div>
+				<% if @page.elements.detect{ |e| e.name == 'tap_controls_button' }.try(:selected) == "option_1" %>
 
-				<div class="right_control">
-					<div class="right_control_button custom_foreground_color_as_bg">
-						<div class="right_icon"></div>
+					<div class="left_control">
+						<div class="left_control_button custom_foreground_color_as_bg">
+							<div class="left_icon"></div>
+						</div>
 					</div>
-				</div>
+
+					<div class="right_control">
+						<div class="right_control_button custom_foreground_color_as_bg">
+							<div class="right_icon"></div>
+						</div>
+					</div>
+
+				<% end %>
 
 			</div> <!-- end gallery -->
 			

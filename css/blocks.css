@@ -516,5 +516,9 @@ body.edit .bottom_nav_base_bar
 	display: none;
 }
 
-
+body.edit .left_control,
+body.edit .right_control
+{
+	display: none;
+}
 
