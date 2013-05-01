@@ -243,12 +243,16 @@ app.main_navigation = (function(){
 		$('#bottom_nav_content').on('click', 'a', function(e){
 			e.preventDefault();
 	        var _this = $(this);
-	        app.feedback.go( _this.parent() );
-	        $('html').addClass('preunload');
-	        var myLink = _this.attr('href');
-	        setTimeout(function(){
-	             window.location.href = myLink;
-	        },1500);
+
+	        if ( navTrigger.hasClass('fully_open') ) {
+		        app.feedback.go( _this.parent() );
+		        $('html').addClass('preunload');
+		        var myLink = _this.attr('href');
+		        setTimeout(function(){
+		             window.location.href = myLink;
+		        },1500);
+		    }
+
 		});
 
 			
