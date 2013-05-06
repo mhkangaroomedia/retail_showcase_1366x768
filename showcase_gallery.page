@@ -61,6 +61,10 @@
 	=======================================================--><body>
 		
 
+
+		<%#= render :region => 'google_analytics_main' %>
+
+
 		<!-- element used for page transitions -->
 		<div class="page_load_transition"></div>
 
@@ -136,7 +140,7 @@
 									
 									<div class="price_div">
 										<span class="price_sign"><%= language_translation('gallery.panel.currency') %></span>
-										<span class="price_dollars"><%= render :textual => 'offer_dollars_', :default => language_translation('gallery.panel.dollars'), :maxlength => '3' %></span>
+										<span class="price_dollars"><%= render :textual => 'offer_dollars_', :default => language_translation('gallery.panel.dollars'), :maxlength => '10' %></span>
 										<span class="price_point">.</span>
 										<span class="price_cents"><%= render :textual => 'offer_cents_', :default => language_translation('gallery.panel.cents'), :maxlength => '2' %></span>
 									</div>
