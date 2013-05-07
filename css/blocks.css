@@ -293,11 +293,18 @@ body.edit .gallery .price_div .price_sign
 	font-size: 23px;
 }
 
+body.edit .gallery .price_div .price_point .text-region-wrapper input.editable_region
+{
+	width: 20px;
+}
+
 body.edit .gallery .price_div .price_point
 {
+	width: 20px;
 	position: absolute;
 	top: 5px;
 	left: 208px;
+	font-size: 25px;
 }
 
 body.edit .gallery .price_div .price_cents
