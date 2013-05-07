@@ -295,7 +295,12 @@ body.edit .gallery .price_div .price_sign
 
 body.edit .gallery .price_div .price_point .text-region-wrapper input.editable_region
 {
-	width: 20px;
+	width: 14px;
+}
+
+body.edit .gallery .price_div .price_point .text-region-wrapper input[disabled="disabled"]
+{
+	display: none;
 }
 
 body.edit .gallery .price_div .price_point
@@ -303,7 +308,7 @@ body.edit .gallery .price_div .price_point
 	width: 20px;
 	position: absolute;
 	top: 5px;
-	left: 208px;
+	left: 197px;
 	font-size: 25px;
 }
 

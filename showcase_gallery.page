@@ -62,7 +62,7 @@
 		
 
 
-		<%#= render :region => 'google_analytics_main' %>
+		<%= render :region => 'google_analytics_main' %>
 
 
 		<!-- element used for page transitions -->
