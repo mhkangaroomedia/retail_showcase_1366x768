@@ -296,20 +296,34 @@ body.edit .gallery .price_div .price_sign
 body.edit .gallery .price_div .price_point .text-region-wrapper input.editable_region
 {
 	width: 14px;
+	/*margin-top: 10px;*/
 }
 
+body.edit .gallery .price_div .price_dollars .text-region-wrapper input[disabled="disabled"],
+body.edit .gallery .price_div .price_cents .text-region-wrapper input[disabled="disabled"],
 body.edit .gallery .price_div .price_point .text-region-wrapper input[disabled="disabled"]
 {
 	display: none;
+}
+
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .gallery .price_div .price_point .text-region-wrapper
+{
+	width: 20px;
 }
 
 body.edit .gallery .price_div .price_point
 {
 	width: 20px;
 	position: absolute;
-	top: 5px;
-	left: 197px;
-	font-size: 25px;
+	top: 9px;
+	left: 201px;
+	font-size: 16px;
+
+}
+
+body.edit div#blocks-wrapper div#inner-blocks-wrapper .gallery .price_div .price_cents .text-region-wrapper
+{
+	width: 30px;
 }
 
 body.edit .gallery .price_div .price_cents
@@ -318,7 +332,7 @@ body.edit .gallery .price_div .price_cents
 	position: absolute;
 	top: 5px;
 	left: auto;
-	right: -10px;
+	right: -32px;
 }
 
 

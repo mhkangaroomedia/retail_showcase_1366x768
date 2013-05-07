@@ -1022,6 +1022,7 @@ a.no_linking
 	border-bottom: 4px dotted white;
 	display: inline-block;
 	margin-top: 5px;
+	line-height: 125px;
 	/*text-align: left;*/
 }
 
@@ -1029,7 +1030,7 @@ a.no_linking
 {
 	font-weight: 700;
 	font-size: 40px;
-	line-height: 1;
+	line-height: 125px;
 	color: white;
 
 	display: inline-block;
