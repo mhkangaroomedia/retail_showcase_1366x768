@@ -267,30 +267,37 @@ body.edit .gallery .price_div .price_dollars .text-region-wrapper
 body.edit .gallery .price_div .price_dollars .text-region-wrapper input.editable_region,
 body.edit .gallery .price_div .price_cents .text-region-wrapper input.editable_region
 {
-	width: 48px;
+	width: 30px;
+	font-size: 16px;
+}
+
+body.edit .gallery .price_div .price_dollars .text-region-wrapper input.editable_region
+{
+	width: 120px;
 }
 
 body.edit .gallery .price_div .price_dollars
 {
-	width: 80px;
+	width: 150px;
 	position: absolute;
 	top: 5px;
-	left: 47px;
+	left: 62px;
 }
 
 
 body.edit .gallery .price_div .price_sign
 {
 	position: absolute;
-	top: 5px;
-	left: 20px;
+	top: 14px;
+	left: 9px;
+	font-size: 23px;
 }
 
 body.edit .gallery .price_div .price_point
 {
 	position: absolute;
 	top: 5px;
-	left: 125px;
+	left: 208px;
 }
 
 body.edit .gallery .price_div .price_cents
@@ -298,7 +305,8 @@ body.edit .gallery .price_div .price_cents
 	width: 80px;
 	position: absolute;
 	top: 5px;
-	left: 147px;
+	left: auto;
+	right: -10px;
 }
 
 
@@ -554,5 +562,47 @@ body.edit .panel_color input[disabled="disabled"]
 {
 	display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

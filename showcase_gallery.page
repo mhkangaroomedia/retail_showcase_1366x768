@@ -141,7 +141,7 @@
 									<div class="price_div">
 										<span class="price_sign"><%= language_translation('gallery.panel.currency') %></span>
 										<span class="price_dollars"><%= render :textual => 'offer_dollars_', :default => language_translation('gallery.panel.dollars'), :maxlength => '10' %></span>
-										<span class="price_point">.</span>
+										<span class="price_point"><%= render :textual => 'offer_point_', :default => ".", :maxlength => '1' %></span>
 										<span class="price_cents"><%= render :textual => 'offer_cents_', :default => language_translation('gallery.panel.cents'), :maxlength => '2' %></span>
 									</div>
 									
