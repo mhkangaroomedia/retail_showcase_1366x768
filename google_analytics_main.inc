@@ -26,14 +26,7 @@
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 		ga('create', 'UA-40321933-2', 'blockslive.com',{'siteSpeedSampleRate': 50});
-		ga('send', 'pageview');
-	</script>
 
-
-
-
-	<!-- get extra information for analytics (using the new ga)  -->
-	<script>
 		var dimensionValue = 'NA'; // screen nickname
 		if(typeof Agent !== 'undefined'){
 			var _device_info = Agent.deviceInfo();
@@ -41,6 +34,9 @@
 			//var id       = _device_info.deviceID();    // device unique id
 		}
 		ga('set', 'dimension1', dimensionValue);
+
+
+		ga('send', 'pageview');
 	</script>
 
 
