@@ -37,7 +37,7 @@
 	<!-- get extra information for analytics (using the new ga)  -->
 	<script>
 		var dimensionValue = 'NA'; // screen nickname
-		if(Agent){
+		if(typeof Agent !== 'undefined'){
 			var _device_info = Agent.deviceInfo();
 			dimensionValue = _device_info.nickName();    // device nickname
 			//var id       = _device_info.deviceID();    // device unique id
