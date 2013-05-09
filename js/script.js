@@ -171,7 +171,7 @@ app.scaleTextToFit = (function(){
 
 
 	function init(){
-		scale( $('.price_field'), 100, 90 );
+		scale( $('.price_field'), 225, 90 );
 	} // end init
 
 
