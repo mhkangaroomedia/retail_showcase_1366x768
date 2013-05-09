@@ -171,12 +171,12 @@ app.scaleTextToFit = (function(){
 
 
 	function init(){
-		scale( $('.price_dollars'), '.price_sign, .price_point, .price_cents', 100, 90 );
+		scale( $('.price_field'), 100, 90 );
 	} // end init
 
 
 
-	function scale(elements, siblingClasses, maxWidth, startFontSizePx) {
+	function scale(elements, maxWidth, startFontSizePx) {
 		
 		elements.each(function(i){
 			var _this = $(this);
@@ -185,11 +185,6 @@ app.scaleTextToFit = (function(){
 				if (_this.width() > maxWidth){
 					fs -= 1;
 					_this.css('font-size', (fs + 'px'));
-
-					_this.siblings(siblingClasses).each(function(){
-						var sizeNow = parseInt( $(this).css('font-size'), 10);
-						$(this).css('font-size', (sizeNow -0.4 + 'px'));
-					});
 				} else {
 					return;
 				}

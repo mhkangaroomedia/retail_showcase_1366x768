@@ -4,9 +4,7 @@ main_menu:
 gallery:
   panel:
     text_1: "現在只要"
-    currency: "NT$"
-    dollars: "1500"
-    cents: ""
+    price_field: "NT$1500"
     text_2: "* 數量有限"
   popup:
     heading: "模態窗口標題"
