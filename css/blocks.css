@@ -589,11 +589,9 @@ body.edit .panel_color input[disabled="disabled"]
 	display: none;
 }
 
-
-
-
-
-
+.gallery .price_div .price_field {
+	font-size: 40px;
+}
 
 
 
