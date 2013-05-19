@@ -162,7 +162,7 @@ var app = (function(){
 
 
 // ----------------------------------------------------- //
-// A FAKE HOVER ACTIVE FEEDBACK 
+// SCALE TEXT TO FIT
 // ----------------------------------------------------- //
 
 app.scaleTextToFit = (function(){
