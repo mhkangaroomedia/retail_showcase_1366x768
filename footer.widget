@@ -1,12 +1,12 @@
 <% if @mode == 'edit' || @mode == 'preview' %>
 	<!-- specify a template this widget will be rendered against in preview mode -->
-	<meta template="/retail_showcase_768x1024/showcase_gallery.page" />
+	<meta template="/retail_showcase_1366x768/showcase_gallery.page" />
 <% end %>
 
 <% if @mode == 'edit' %>
 	<!-- include a template group stylesheet to render widget nicely -->
-	<link rel="stylesheet" href="/retail_showcase_768x1024/css/style.css">
-	<link rel="stylesheet" href="/retail_showcase_768x1024/css/blocks.css">
+	<link rel="stylesheet" href="/retail_showcase_1366x768/css/style.css">
+	<link rel="stylesheet" href="/retail_showcase_1366x768/css/blocks.css">
 <% end %>
 
 
