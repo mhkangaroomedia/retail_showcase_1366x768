@@ -30,9 +30,9 @@
 		<% end %>
 
 		
-		<link rel="stylesheet" href="/templates/retail_showcase_768x1366/css/style.css">
+		<link rel="stylesheet" href="/retail_showcase_768x1366/css/style.css">
 	    <% if @mode == 'edit' %>
-			<link rel="stylesheet" href="/templates/retail_showcase_768x1366/css/blocks.css">
+			<link rel="stylesheet" href="/retail_showcase_768x1366/css/blocks.css">
 	  	<% else %>
 			<script src="/templates/retail_showcase_768x1366/js/libs/modernizr-2.6.2.custom.min.js"></script>
 	  	<% end %>
@@ -114,7 +114,7 @@
 
 						<div class="gallery_item slide left">
 							
-							<%= render :image => 'main_image_', :default => "/templates/retail_showcase_768x1366/img/placeholders/products_768x1066.jpg", :width => "768", :height => "1066" %>
+							<%= render :image => 'main_image_', :default => "/retail_showcase_768x1366/img/placeholders/products_768x1066.jpg", :width => "768", :height => "1066" %>
 
 							<% if @mode == 'edit' %>
 								<div class="blocks_notes type_2 panel_note">
@@ -170,7 +170,7 @@
 										<div class="copy"><%= render :textual => 'tiny_mce_text_unique_name', :type => :multi, :default => language_translation('gallery.popup.default_copy') %></div>
 										<%= render :image => 'popup_image', :default => "/templates/retail_showcase_768x1366/img/placeholders/products_250x330.jpg", :width => "250", :height => 200..380 %>
 									</div> <!-- end info_for_popup -->
-									<%= render :image => 'extra_button_image', :default => "/templates/retail_showcase_768x1366/img/placeholders/extra_240x240.png", :width => "240", :height => "240" %>
+									<%= render :image => 'extra_button_image', :default => "/retail_showcase_768x1366/img/placeholders/extra_240x240.png", :width => "240", :height => "240" %>
 								</div> <!-- end extra pop -->
 
 							<% end %>
@@ -294,10 +294,10 @@
 		
 		<%= render :region => 'helpers' %>
 
-		<script src="/templates/retail_showcase_768x1366/js/libs/jquery-1.8.1.min.js"></script>
-		<script src="/templates/retail_showcase_768x1366/js/libs/jquery-ui-1.9.0.custom.min.js"></script>
-		<script src="/templates/retail_showcase_768x1366/js/plugins.js"></script>
-		<script src="/templates/retail_showcase_768x1366/js/script.js"></script>
+		<script src="/retail_showcase_768x1366/js/libs/jquery-1.8.1.min.js"></script>
+		<script src="/retail_showcase_768x1366/js/libs/jquery-ui-1.9.0.custom.min.js"></script>
+		<script src="/retail_showcase_768x1366/js/plugins.js"></script>
+		<script src="/retail_showcase_768x1366/js/script.js"></script>
 		 <% if @mode == 'edit' %>
 			<script>
 				function insertScriptForBlocks(src) {
@@ -305,7 +305,7 @@
 					blocksEditScript.src = src;
 					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(blocksEditScript, s);
 				}
-				insertScriptForBlocks('/templates/retail_showcase_768x1366/js/blocksEditScript.js');
+				insertScriptForBlocks('/retail_showcase_768x1366/js/blocksEditScript.js');
 			</script>
 	  	<% end %>
 	</body>
