@@ -183,7 +183,7 @@
 
 								<div class="extra link"><!-- option 2  -->
 									<%= render :link => "extra_link", :text_editable => false, :link_value => '#', :link_attributes => { :class => "extra_link" } do %>
-										<%= render :image => 'extra_button_image_with_link', :default => "/templates/templates/retail_showcase_1366x768/img/placeholders/extra_240x240.png", :width => "240", :height => "240" %>
+										<%= render :image => 'extra_button_image_with_link', :default => "templates/retail_showcase_1366x768/img/placeholders/extra_240x240.png", :width => "240", :height => "240" %>
 									<% end %>
 								</div>
 
