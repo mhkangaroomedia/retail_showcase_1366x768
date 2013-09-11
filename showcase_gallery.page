@@ -241,11 +241,11 @@
 
 
 
-			<!-- TOP NAVIGATION START -->
+			<!-- TOP NAVIGATION START 
 			<div class="top_nav nav_animation">
 				<!-- <div id="top_nav_trigger" class="show_menu ccsBgAni_half">
 					<span class="menu_title custom_foreground_color"><%#= render :textual => 'top_nav_menu_title', :default => 'Menu', :maxlength => '30' %></span>
-				</div> -->
+				</div> 
 				<div class="current_page_div">
 					<span class="current_page"><%#= @page.name %></span>
 				</div>
